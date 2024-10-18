@@ -1,0 +1,15 @@
+FROM node:20
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm install
+
+Run npm run build
+
+Run rm -rf ./src
+
+EXPOSE 3001
+
+CMD [ "npm", "run", "start:prod" ]
